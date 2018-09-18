@@ -11,23 +11,22 @@ import redis.clients.jedis.JedisCluster;
 public class RedisUtils {
 
     @Autowired
-    private  JedisCluster jedisCluster;
+    private JedisCluster jedisCluster;
 
-    public  void set(String key, String value) {
-        jedisCluster.set(key,value);
-
+    public void set(String key, String value) {
+        jedisCluster.set(key, value);
     }
 
-    public  String get(String key) {
+    public String get(String key) {
         return jedisCluster.get(key);
     }
 
-    public   void set(String key, String value, String nxxx, String expx, long time) {
-        jedisCluster.set(key,value,nxxx,expx,time);
+    public void set(String key, String value, String nxxx, String expx, long time) {
+        jedisCluster.set(key, value, nxxx, expx, time);
     }
 
-    public   Long expire(String key, int seconds) {
-        return jedisCluster.expire(key,seconds);
+    public Long expire(String key, int seconds) {
+        return jedisCluster.expire(key, seconds);
     }
 
 

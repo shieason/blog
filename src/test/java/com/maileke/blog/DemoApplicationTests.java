@@ -40,9 +40,7 @@ public class DemoApplicationTests {
     @Test
     public void testRedis() {
         redisUtil.set("a", "12");
-
         System.out.println("a: " + redisUtil.get("a"));
-
     }
 
 }
