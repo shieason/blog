@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shieason.blog</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>Blog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Blog</name>
+	<description>Blog project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -52,11 +52,11 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!--mybatis plus-->
+		<!--mybatis plus 注意这里的2.2.0版本和3.0版本的api方法略有差别-->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.0.1</version>
+			<version>2.2.0</version>
 		</dependency>
 
 		<!--springboottest-->

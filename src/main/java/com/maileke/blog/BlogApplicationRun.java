@@ -12,10 +12,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.maileke.blog.mapper")
-public class DemoApplication {
+public class BlogApplicationRun {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(BlogApplicationRun.class, args);
     }
 }
