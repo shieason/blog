@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
-import com.baomidou.mybatisplus.generator.config.rules.DbType;
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
@@ -31,7 +31,7 @@ public class MyGenerator {
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
         gc.setEnableCache(false);// XML 二级缓存
-        gc.setBaseResultMap(true);// XML ResultMap
+        gc.setBaseResultMap(false);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
         gc.setAuthor("shieason");
 
@@ -57,7 +57,7 @@ public class MyGenerator {
         strategy.setTablePrefix(new String[]{"t_"});// 此处可以修改为您的表前缀
 //        strategy.setNaming(NamingStrategy.remove_prefix_and_camel);// 表名生成策略
 //        strategy.setNaming(NamingStrategy.removePrefixAndCamel());// 表名生成策略
-//        strategy.setInclude(new String[]{""}); // 需要生成的表
+        strategy.setInclude(new String[]{"user"}); // 需要生成的表
 //        strategy.setExclude(new String[]{"t_rong_bid"}); // 排除生成的表
         // 字段名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
@@ -83,7 +83,7 @@ public class MyGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("hello");
+        pc.setParent("com.maileke.blog");
         pc.setModuleName("");
         pc.setController("controller");
 

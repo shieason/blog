@@ -1,7 +1,7 @@
 package com.maileke.blog.service.impl;
 
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.maileke.blog.entity.Student;
 import com.maileke.blog.mapper.StudentMapper;
 import com.maileke.blog.service.StudentService;

@@ -32,26 +32,26 @@ public class StudentController {
 	@ApiOperation(value = "获取学生列表")
 	@GetMapping("")
 	public Object getStudents() {
-        List<Student> students = studentService.selectList(null);
+        List<Student> students = studentService.list(null);
 		return Mess.succ(students);
 	}
 
 	@ApiOperation("更新学生")
 	@PostMapping("")
 	public Object postStudent(@RequestBody Student student) {
-		studentService.insert(student);
+		studentService.save(student);
 		return Mess.succ(null);
 	}
 
 	@GetMapping("/{id}")
 	public Object getStudent(@PathVariable("id") Long id) {
-        Student student = studentService.selectById(id);
+        Student student = studentService.getById(id);
 		return Mess.succ(student);
 	}
 
 	@PutMapping("/{id}")
 	public Object putStudent(@PathVariable("id") Long id, @RequestBody Student student) {
-		Student stu = studentService.selectById(id);
+		Student stu = studentService.getById(id);
 		stu.setAge(student.getAge());
 		stu.setName(student.getName());
 		studentService.updateById(stu);
@@ -61,7 +61,7 @@ public class StudentController {
 
 	@DeleteMapping("/{id}")
 	public Object deleteStudent(@PathVariable Long id) {
-	    studentService.deleteById(id);
+	    studentService.removeById(id);
 	    return Mess.succ(null);
     }
 }
